@@ -12,19 +12,18 @@ html {
   color: white;
   /* background: rgb(0, 0, 0); */
   /* background: linear-gradient(90deg, rgba(0,0,0,1) 30%, rgba(7,2,24,1) 50%); */
-background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1242%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='url(%23SvgjsLinearGradient1243)'%3e%3c/rect%3e%3cpath d='M889.66-24.23C770.39 20.64 847.8 361.49 579.85 380.54 311.91 399.59 118.74 514.17-39.76 514.94' stroke='rgba(18%2c 5%2c 62%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M888.24-59.35C746.79-48.57 676.07 215.96 400.97 231.46 125.86 246.96 47.66 450.18-86.31 455.46' stroke='rgba(18%2c 5%2c 62%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M555.53-50.98C449.32-47.51 388.07 101.95 164.81 116.38-58.45 130.81-108.01 372.62-225.91 385.18' stroke='rgba(18%2c 5%2c 62%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M1271.76-8.41C1085.34 4.23 972.47 351.35 622.15 361.22 271.83 371.09 139.6 516.92-27.46 518.02' stroke='rgba(7%2c 2%2c 24%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M1258.39-93.21C1073.02-79.61 940.17 283.23 617.41 283.5 294.65 283.77 146.15 62.69-23.57 59.5' stroke='rgba(7%2c 2%2c 24%2c 1)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1242'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='50%25' x2='100%25' y2='50%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1243'%3e%3cstop stop-color='rgba(0%2c 0%2c 1%2c 1)' offset='0.31'%3e%3c/stop%3e%3cstop stop-color='rgba(7%2c 2%2c 24%2c 1)' offset='0.5'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1242%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='url(%23SvgjsLinearGradient1243)'%3e%3c/rect%3e%3cpath d='M889.66-24.23C770.39 20.64 847.8 361.49 579.85 380.54 311.91 399.59 118.74 514.17-39.76 514.94' stroke='rgba(18%2c 5%2c 62%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M888.24-59.35C746.79-48.57 676.07 215.96 400.97 231.46 125.86 246.96 47.66 450.18-86.31 455.46' stroke='rgba(18%2c 5%2c 62%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M555.53-50.98C449.32-47.51 388.07 101.95 164.81 116.38-58.45 130.81-108.01 372.62-225.91 385.18' stroke='rgba(18%2c 5%2c 62%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M1271.76-8.41C1085.34 4.23 972.47 351.35 622.15 361.22 271.83 371.09 139.6 516.92-27.46 518.02' stroke='rgba(7%2c 2%2c 24%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M1258.39-93.21C1073.02-79.61 940.17 283.23 617.41 283.5 294.65 283.77 146.15 62.69-23.57 59.5' stroke='rgba(7%2c 2%2c 24%2c 1)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1242'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='50%25' x2='100%25' y2='50%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1243'%3e%3cstop stop-color='rgba(0%2c 0%2c 1%2c 1)' offset='0.31'%3e%3c/stop%3e%3cstop stop-color='rgba(7%2c 2%2c 24%2c 1)' offset='0.5'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
   overflow-y: hidden;
 }
 
 .herosection-container {
   z-index: 0;
-  width: 800px;
+  width: 1000px;
   height: 70vh;
   padding: 0;
   margin: 10vh 0 0;
   display: flex;
   flex-direction: column;
-  
 }
 
 .herosection-topContainer {
@@ -44,13 +43,36 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
 }
 .herosection-text h2 {
   font-family: "Poppins", sans-serif;
-  font-size: 2.3rem;
+  font-size: 3rem;
   font-weight: 600;
   margin: 0;
 }
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+  font-size: 3rem;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .1em solid rgba(7,2,24,1); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(255, 255, 255) }
+}
 .herosection-text p {
   font-family: "Poppins", sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 100;
   text-align: justify;
   color: #eeeeee;
@@ -63,11 +85,26 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
   color: grey;
 }
 .herosection-topRight {
-  text-align: end;
+  text-align: center;
   width: 50%;
 }
 .herosection-topRight img {
-  width: 80%;
+  width: 70%;
+}
+.ball {
+  animation: bounce 1.5s;
+  animation-direction: alternate;
+  /* animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5); */
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  from {
+    transform: translate3d(0, -10px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 .button {
@@ -96,5 +133,5 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
 }
 
 .herosection-bottomRight img {
-  width: 100%;
+  width: 70%;
 }

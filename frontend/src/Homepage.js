@@ -15,10 +15,10 @@ const Homepage = () => {
         </div>
         <div className="herosection-topContainer">
           <div className="herosection-topLeft">
-            <div className="herosection-text">
+            <div className="herosection-text typewriter">
               <h2>
                 Predicting and preventing car accidents is critical for public
-                safety.
+                <h1>safety.</h1>
               </h2>
               <p>
                 Every year, countless lives are lost or affected by car
@@ -35,7 +35,7 @@ const Homepage = () => {
               </span>
             </div>
           </div>
-          <div className="herosection-topRight">
+          <div className="herosection-topRight ball">
             <img src={map} alt="" />
           </div>
         </div>
