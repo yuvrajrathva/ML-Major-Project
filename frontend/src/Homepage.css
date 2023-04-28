@@ -2,7 +2,7 @@ html {
   font-size: 10px;
 }
 
-.herosection-maincontainer {
+.herosection-mainContainer {
   display: flex;
   flex-direction: row;
   /* align-items: center; */
@@ -17,7 +17,6 @@ html {
 }
 
 .herosection-container {
-  z-index: 0;
   width: 1000px;
   height: 70vh;
   padding: 0;
@@ -51,24 +50,31 @@ html {
 .typewriter h1 {
   font-size: 3rem;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .1em solid rgba(7,2,24,1); /* The typwriter cursor */
+  border-right: 0.1em solid rgba(7, 2, 24, 1); /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  animation: 
-    typing 3.5s steps(30, end),
-    blink-caret .5s step-end infinite;
+  animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
 }
 
 /* The typing effect */
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: rgb(255, 255, 255) }
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(255, 255, 255);
+  }
 }
 .herosection-text p {
   font-family: "Poppins", sans-serif;
@@ -106,8 +112,13 @@ html {
     transform: translate3d(0, 0, 0);
   }
 }
-
-.button {
+.herosection-bottomLeft {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  z-index: 1;
+}
+.severity-button {
   padding: 0.7rem 3rem;
   border-radius: 0.5rem;
   border: 2px solid grey;
@@ -117,21 +128,43 @@ html {
   margin: 1.5rem 0 0;
   cursor: pointer;
 }
-.button:hover {
+.severity-button:hover {
   background-color: #f5f5f5;
   color: black;
+  cursor: pointer;
+}
+.coordinates-button {
+  padding: 0.7rem 3rem;
+  border-radius: 0.5rem;
+  border: 2px solid grey;
+  width: fit-content;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0;
+  cursor: pointer;
+  color: black;
+  background-color: #f5f5f5;
+}
+.coordinates-button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: transparent;
 }
 .herosection-bottomContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 100%;
 }
 
 .herosection-bottomRight {
   width: 70%;
   text-align: end;
+  position: absolute;
+  bottom: 0;
+  /* z-index: -1; */
 }
 
 .herosection-bottomRight img {
-  width: 70%;
+  width: 60%;
 }

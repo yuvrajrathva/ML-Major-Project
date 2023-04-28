@@ -5,8 +5,16 @@ import logo from "./assets/logo.png";
 import "./Homepage.css";
 
 const Homepage = () => {
+
+  const severity = () => {
+    window.location.href = "/severity";
+  }
+  const coordinate = () => {
+    window.location.href = "/coordinates";
+  }
+
   return (
-    <div className="herosection-maincontainer">
+    <div className="herosection-mainContainer">
       <div className="herosection-container">
         <div>
           <div className="logo">
@@ -41,7 +49,8 @@ const Homepage = () => {
         </div>
         <div className="herosection-bottomContainer">
           <div className="herosection-bottomLeft">
-            <div className="button">Button</div>
+            <div className="severity-button" onClick={severity}>Severity</div>
+            <div className="coordinates-button" onClick={coordinate}>Coordinates</div>
           </div>
           <div className="herosection-bottomRight">
             <img src={road} alt="" />

@@ -1,0 +1,142 @@
+html {
+  font-size: 10px;
+}
+
+.coordinates-mainContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  color: white;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1242%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='url(%23SvgjsLinearGradient1243)'%3e%3c/rect%3e%3cpath d='M889.66-24.23C770.39 20.64 847.8 361.49 579.85 380.54 311.91 399.59 118.74 514.17-39.76 514.94' stroke='rgba(18%2c 5%2c 62%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M888.24-59.35C746.79-48.57 676.07 215.96 400.97 231.46 125.86 246.96 47.66 450.18-86.31 455.46' stroke='rgba(18%2c 5%2c 62%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M555.53-50.98C449.32-47.51 388.07 101.95 164.81 116.38-58.45 130.81-108.01 372.62-225.91 385.18' stroke='rgba(18%2c 5%2c 62%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M1271.76-8.41C1085.34 4.23 972.47 351.35 622.15 361.22 271.83 371.09 139.6 516.92-27.46 518.02' stroke='rgba(7%2c 2%2c 24%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M1258.39-93.21C1073.02-79.61 940.17 283.23 617.41 283.5 294.65 283.77 146.15 62.69-23.57 59.5' stroke='rgba(7%2c 2%2c 24%2c 1)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1242'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='50%25' x2='100%25' y2='50%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1243'%3e%3cstop stop-color='rgba(0%2c 0%2c 1%2c 1)' offset='0.31'%3e%3c/stop%3e%3cstop stop-color='rgba(7%2c 2%2c 24%2c 1)' offset='0.5'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+}
+
+.coordinates-container {
+  width: 1000px;
+  /* height: 70vh; */
+  padding: 0;
+  margin: 10vh 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.logo {
+  cursor: pointer;
+}
+.logo img:hover {
+  width: 110%;
+}
+.coordinates-topContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.coordinates-topContainer h1 {
+  font-size: 5rem;
+  font-family: "poppins", sans-serif;
+  font-weight: 700;
+  background: #ffffff;
+  background: linear-gradient(to right, #ffffff 48%, #cf1512 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 3vh;
+}
+.coordinates-bottomContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  overflow: scroll;
+  gap: 10px;
+  border: 1px dashed rgb(27, 5, 108);
+  border-radius: 1rem;
+}
+
+.coordinates-bottomContainer form {
+  width: 100%;
+  padding: 3vw 5vw;
+}
+
+.coordinates-bottomContainer form label {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.coordinates-bottomContainer form label input::placeholder {
+  font-size: 1rem;
+}
+
+.coordinates-bottomContainer form .one input,
+.two input,
+.three input,
+.four input,
+.five input,
+.six input,
+.seven input,
+.eight input,
+.nine input,
+.ten input {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 0 5vh;
+  border: none;
+  border-bottom: 1px solid grey;
+  padding: 0.5vw 1vw;
+  font-size: 1.5rem;
+  font-family: "poppins", sans-serif;
+  font-weight: 500;
+  color: #ffffff;
+  padding: 1rem 0 0;
+  background-color: transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.coordinates-bottomContainer .five input[type="checkbox"]{
+    accent-color: rgb(27, 5, 108);
+    border: 1px solid #ffffff;
+    margin: 1rem 0 0;
+    cursor: pointer;
+}
+
+.coordinates-bottomContainer .one,
+.two,
+.three,
+.four,
+.five,
+.six,
+.seven,
+.eight,
+.nine,
+.ten {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 0 5vh;
+  gap: 5rem;
+}
+
+.submit input {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #1e1e1e;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.submit input:hover {
+  background-color: #cf1512;
+}
+
