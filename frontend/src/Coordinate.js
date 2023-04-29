@@ -64,21 +64,21 @@ const Coordinate = () => {
 
     };
     console.log(data);
-    fetch("http://localhost:5000/coordinates", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        alert("coordinates of Accident is " + data.coordinates);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    // fetch("http://localhost:5000/coordinates", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(data),
+    // })
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     console.log(data);
+    //     alert("coordinates of Accident is " + data.coordinates);
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
   };
 
   const homepage = () => {
@@ -349,7 +349,7 @@ const Coordinate = () => {
                 />
               </div>
             </div>
-            <div className="submit" onClick={onSubmit}>
+            <div className="submit">
               <input type="submit" value="Submit" />
             </div>
           </form>

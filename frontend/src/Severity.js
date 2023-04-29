@@ -2,93 +2,94 @@ import React from "react";
 import logo from "./assets/logo.png";
 import "./Severity.css";
 const Severity = () => {
+  const onSubmit = (e) => {
+    e.preventDefault();
+    const end_lat = e.target.elements.end_lat.value;
+    const end_lng = e.target.elements.end_lng.value;
+    const distance = e.target.elements.distance.value;
+    const side = e.target.elements.side.value;
+    const state = e.target.elements.state.value;
+    const timezone = e.target.elements.timezone.value;
+    const temperature = e.target.elements.temperature.value;
+    const humidity = e.target.elements.humidity.value;
+    const pressure = e.target.elements.pressure.value;
+    const wind_direction = e.target.elements.wind_direction.value;
+    const wind_speed = e.target.elements.wind_speed.value;
+    const precipitation = e.target.elements.precipitation.value;
+    const weather_condition = e.target.elements.weather_condition.value;
+    const crossing = e.target.elements.crossing.value;
+    const give_way = e.target.elements.give_way.value;
+    const junction = e.target.elements.junction.value;
+    const station = e.target.elements.station.value;
+    const traffic_signal = e.target.elements.traffic_signal.value;
+    const sunrise_sunset = e.target.elements.sunrise_sunset.value;
+    const civil_twilight = e.target.elements.civil_twilight.value;
+    const nautical_twilight = e.target.elements.nautical_twilight.value;
+    const astronomical_twilight = e.target.elements.astronomical_twilight.value;
+    const month = e.target.elements.month.value;
+    const year = e.target.elements.year.value;
+    const hour = e.target.elements.hour.value;
+    const weekday = e.target.elements.weekday.value;
+    const weather_timestampmonth =
+      e.target.elements.weather_timestampmonth.value;
+    const weather_timestampyear = e.target.elements.weather_timestampyear.value;
+    const weather_timestamphour = e.target.elements.weather_timestamphour.value;
+    const weather_timestampweekday =
+      e.target.elements.weather_timestampweekday.value;
 
-    const onSubmit = (e) => {
-        e.preventDefault();
-        const end_lat = e.target.elements.end_lat.value;
-        const end_lng = e.target.elements.end_lng.value;
-        const distance = e.target.elements.distance.value;
-        const side = e.target.elements.side.value;
-        const state = e.target.elements.state.value;
-        const timezone = e.target.elements.timezone.value;
-        const temperature = e.target.elements.temperature.value;
-        const humidity = e.target.elements.humidity.value;
-        const pressure = e.target.elements.pressure.value;
-        const wind_direction = e.target.elements.wind_direction.value;
-        const wind_speed = e.target.elements.wind_speed.value;
-        const precipitation = e.target.elements.precipitation.value;
-        const weather_condition = e.target.elements.weather_condition.value;
-        const crossing = e.target.elements.crossing.value;
-        const give_way = e.target.elements.give_way.value;
-        const junction = e.target.elements.junction.value;
-        const station = e.target.elements.station.value;
-        const traffic_signal = e.target.elements.traffic_signal.value;
-        const sunrise_sunset = e.target.elements.sunrise_sunset.value;
-        const civil_twilight = e.target.elements.civil_twilight.value;
-        const nautical_twilight = e.target.elements.nautical_twilight.value;
-        const astronomical_twilight = e.target.elements.astronomical_twilight.value;
-        const month = e.target.elements.month.value;
-        const year = e.target.elements.year.value;
-        const hour = e.target.elements.hour.value;
-        const weekday = e.target.elements.weekday.value;
-        const weather_timestampmonth = e.target.elements.weather_timestampmonth.value;  
-        const weather_timestampyear = e.target.elements.weather_timestampyear.value;
-        const weather_timestamphour = e.target.elements.weather_timestamphour.value;
-        const weather_timestampweekday = e.target.elements.weather_timestampweekday.value;
-
-        const data = {
-            end_lat: end_lat,
-            end_lng: end_lng,
-            distance: distance,
-            side: side,
-            state: state,
-            timezone: timezone,
-            temperature: temperature,
-            humidity: humidity,
-            pressure: pressure,
-            wind_direction: wind_direction,
-            wind_speed: wind_speed,
-            precipitation: precipitation,
-            weather_condition: weather_condition,
-            crossing: crossing,
-            give_way: give_way,
-            junction: junction,
-            station: station,
-            traffic_signal: traffic_signal,
-            sunrise_sunset: sunrise_sunset,
-            civil_twilight: civil_twilight,
-            nautical_twilight: nautical_twilight,
-            astronomical_twilight: astronomical_twilight,   
-            month: month,
-            year: year,
-            hour: hour,
-            weekday: weekday,
-            weather_timestampmonth: weather_timestampmonth,
-            weather_timestampyear: weather_timestampyear,
-            weather_timestamphour: weather_timestamphour,
-            weather_timestampweekday: weather_timestampweekday
-        };
-        console.log(data);
-        fetch("http://localhost:5000/severity", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(data),
-        })
-        .then((res) => res.json())
-        .then((data) => {
-            console.log(data);
-            alert("Severity of Accident is " + data.severity);
-        })
-        .catch((err) => {
-            console.log(err);
-        });
+    const data = {
+      end_lat: end_lat,
+      end_lng: end_lng,
+      distance: distance,
+      side: side,
+      state: state,
+      timezone: timezone,
+      temperature: temperature,
+      humidity: humidity,
+      pressure: pressure,
+      wind_direction: wind_direction,
+      wind_speed: wind_speed,
+      precipitation: precipitation,
+      weather_condition: weather_condition,
+      crossing: crossing,
+      give_way: give_way,
+      junction: junction,
+      station: station,
+      traffic_signal: traffic_signal,
+      sunrise_sunset: sunrise_sunset,
+      civil_twilight: civil_twilight,
+      nautical_twilight: nautical_twilight,
+      astronomical_twilight: astronomical_twilight,
+      month: month,
+      year: year,
+      hour: hour,
+      weekday: weekday,
+      weather_timestampmonth: weather_timestampmonth,
+      weather_timestampyear: weather_timestampyear,
+      weather_timestamphour: weather_timestamphour,
+      weather_timestampweekday: weather_timestampweekday,
     };
+    console.log(data);
+    // fetch("http://localhost:5000/severity", {
+    //     method: "POST",
+    //     headers: {
+    //         "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify(data),
+    // })
+    // .then((res) => res.json())
+    // .then((data) => {
+    //     console.log(data);
+    //     alert("Severity of Accident is " + data.severity);
+    // })
+    // .catch((err) => {
+    //     console.log(err);
+    // });
+  };
 
-    const homepage = () => {
-        window.location.href = "/";
-    };
+  const homepage = () => {
+    window.location.href = "/";
+  };
 
   return (
     <div className="severity-mainContainer">
@@ -97,9 +98,7 @@ const Severity = () => {
           <div className="logo" onClick={homepage}>
             <img src={logo} />
           </div>
-          <h1>
-            Check Severity of Accident
-          </h1>
+          <h1>Check Severity of Accident</h1>
         </div>
         <div className="severity-bottomContainer">
           <form onSubmit={onSubmit}>
@@ -111,6 +110,7 @@ const Severity = () => {
                   id="end_lat"
                   name="end_lat"
                   placeholder="Enter End Latitude"
+                  required
                 />
               </div>
               <div className="end_lng">
@@ -120,6 +120,7 @@ const Severity = () => {
                   id="end_lng"
                   name="end_lng"
                   placeholder="Enter End Longitude"
+                  required
                 />
               </div>
               <div className="distance">
@@ -129,6 +130,7 @@ const Severity = () => {
                   id="distance"
                   name="distance"
                   placeholder="Enter Distance"
+                  required
                 />
               </div>
             </div>
@@ -140,6 +142,7 @@ const Severity = () => {
                   id="side"
                   name="side"
                   placeholder="Enter Side"
+                  required
                 />
               </div>
               <div className="state">
@@ -149,6 +152,7 @@ const Severity = () => {
                   id="state"
                   name="state"
                   placeholder="Enter State"
+                  required
                 />
               </div>
               <div className="timezone">
@@ -158,6 +162,7 @@ const Severity = () => {
                   id="timezone"
                   name="timezone"
                   placeholder="Enter Timezone"
+                  required
                 />
               </div>
             </div>
@@ -169,6 +174,7 @@ const Severity = () => {
                   id="temperature"
                   name="temperature"
                   placeholder="Enter Temperature"
+                                    required
                 />
               </div>
               <div className="humidity">
@@ -178,6 +184,7 @@ const Severity = () => {
                   id="humidity"
                   name="humidity"
                   placeholder="Enter Humidity"
+                                    required
                 />
               </div>
               <div className="pressure">
@@ -187,6 +194,7 @@ const Severity = () => {
                   id="pressure"
                   name="pressure"
                   placeholder="Enter Pressure"
+                                    required
                 />
               </div>
             </div>
@@ -198,6 +206,7 @@ const Severity = () => {
                   id="wind_direction"
                   name="wind_direction"
                   placeholder="Enter Wind Direction"
+                  required
                 />
               </div>
               <div className="wind_speed">
@@ -207,6 +216,7 @@ const Severity = () => {
                   id="wind_speed"
                   name="wind_speed"
                   placeholder="Enter Wind Speed"
+                  required
                 />
               </div>
             </div>
@@ -218,6 +228,7 @@ const Severity = () => {
                   id="precipitation"
                   name="precipitation"
                   placeholder="Enter Precipitation"
+                  required
                 />
               </div>
               <div className="weather_condition">
@@ -227,6 +238,7 @@ const Severity = () => {
                   id="weather_condition"
                   name="weather_condition"
                   placeholder="Enter Weather Condition"
+                  required
                 />
               </div>
             </div>
@@ -264,6 +276,7 @@ const Severity = () => {
                   id="sunrise_sunset"
                   name="sunrise_sunset"
                   placeholder="Enter Sunrise Sunset"
+                  required
                 />
               </div>
             </div>
@@ -275,6 +288,7 @@ const Severity = () => {
                   id="civil_twilight"
                   name="civil_twilight"
                   placeholder="Enter Civil Twilight"
+                  required
                 />
               </div>
               <div className="nautical_twilight">
@@ -284,6 +298,7 @@ const Severity = () => {
                   id="nautical_twilight"
                   name="nautical_twilight"
                   placeholder="Enter Nautical Twilight"
+                  required
                 />
               </div>
               <div className="astronomical_twilight">
@@ -306,6 +321,7 @@ const Severity = () => {
                   id="month"
                   name="month"
                   placeholder="Enter Month"
+                  required
                 />
               </div>
               <div className="year">
@@ -315,6 +331,7 @@ const Severity = () => {
                   id="year"
                   name="year"
                   placeholder="Enter Year"
+                  required
                 />
               </div>
               <div className="hour">
@@ -324,6 +341,7 @@ const Severity = () => {
                   id="hour"
                   name="hour"
                   placeholder="Enter Hour"
+                  required
                 />
               </div>
               <div className="weekday">
@@ -333,6 +351,7 @@ const Severity = () => {
                   id="weekday"
                   name="weekday"
                   placeholder="Enter Weekday"
+                  required
                 />
               </div>
             </div>
@@ -346,6 +365,7 @@ const Severity = () => {
                   id="weather_timestampmonth"
                   name="weather_timestampmonth"
                   placeholder="Enter Weather Timestamp Month"
+                  required
                 />
               </div>
               <div className="weather_timestampyear">
@@ -357,10 +377,11 @@ const Severity = () => {
                   id="weather_timestampyear"
                   name="weather_timestampyear"
                   placeholder="Enter Weather Timestamp Year"
+                  required
                 />
               </div>
             </div>
-            <div className="ten">
+            <div className="eleven">
               <div className="weather_timestamphour">
                 <label htmlFor="weather_timestamphour">
                   Weather Timestamp Hour
@@ -370,6 +391,7 @@ const Severity = () => {
                   id="weather_timestamphour"
                   name="weather_timestamphour"
                   placeholder="Enter Weather Timestamp Hour"
+                  required
                 />
               </div>
               <div className="weather_timestampweekday">
@@ -381,10 +403,11 @@ const Severity = () => {
                   id="weather_timestampweekday"
                   name="weather_timestampweekday"
                   placeholder="Enter Weather Timestamp Weekday"
+                  required
                 />
               </div>
             </div>
-            <div className="submit" onClick={onSubmit}>
+            <div className="submit">
               <input type="submit" value="Submit" />
             </div>
           </form>
