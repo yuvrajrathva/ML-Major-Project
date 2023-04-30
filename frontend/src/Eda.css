@@ -1,0 +1,86 @@
+.eda-mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000000;
+  min-height: 100vh;
+}
+
+.eda-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 1000px;
+}
+
+.eda-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem 0 0;
+  gap: 10px;
+}
+
+.eda-filter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.eda-filter h1 {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "poppins", sans-serif;
+  margin: 0 0 1rem;
+}
+.eda-filter select {
+  background-color: transparent;
+  padding: 1rem 2rem;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "poppins", sans-serif;
+  margin: 0 0 2rem;
+  cursor: pointer;
+}
+
+.eda-filter select:focus {
+  outline: none;
+}
+
+.eda-filter select option {
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "poppins", sans-serif;
+  cursor: pointer;
+  text-align: center;
+}
+
+.eda-title h1 {
+  color: #ffffff;
+  font-size: 4rem;
+  font-weight: 700;
+  font-family: "poppins", sans-serif;
+}
+
+.eda-graphsContainer .graph-div {
+  background-color: #060116;
+  padding: 3rem 5rem;
+  margin: 0 0 3rem;
+  border-radius: 5px;
+  border: 1px dashed #3274A1;
+}
+
+.eda-graphsContainer .graph-div .graph img {
+  width: 100%;
+  height: 50vh;
+}

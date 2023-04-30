@@ -12,7 +12,10 @@ const Homepage = () => {
   const coordinate = () => {
     window.location.href = "/coordinates";
   }
-
+  const eda = () => {
+    window.location.href = "/eda";
+  }
+  
   return (
     <div className="herosection-mainContainer">
       <div className="herosection-container">
@@ -51,6 +54,9 @@ const Homepage = () => {
           <div className="herosection-bottomLeft">
             <div className="severity-button" onClick={severity}>Severity</div>
             <div className="coordinates-button" onClick={coordinate}>Coordinates</div>
+            <div className="eda-button" onClick={eda}>
+              EDA
+            </div>
           </div>
           <div className="herosection-bottomRight">
             <img src={road} alt="" />

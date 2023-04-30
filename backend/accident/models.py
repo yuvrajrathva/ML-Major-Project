@@ -113,3 +113,21 @@ class Coordinates(models.Model):
 
     def __str__(self):
         return self.End_Lat
+
+
+TYPE_CHOICES = (
+    ("Univariate continuous data analysis" , "Univariate continuous data analysis"),
+    ("Univariate discrete data analysis" , "Univariate discrete data analysis"),
+    ("Bivariate categorical vs. categorical data analysis" , "Bivariate categorical vs. categorical data analysis"),
+    ("Region-wise data analysis" , "Region-wise data analysis"),
+    ("With time, data analysis" , "With time, data analysis"),
+    ("Weather conditions, data analysis" , "Weather conditions, data analysis"),
+    ("Continuous input, categorical output data analysis" , "Continuous input, categorical output data analysis"),
+)
+
+class Graph(models.Model):
+    type = models.CharField(max_length=100,choices=TYPE_CHOICES, default="char")
+    img = models.ImageField(upload_to='images/', default='images/None/no-img.jpg')
+
+    def __str__(self):
+        return self.type

@@ -7,8 +7,8 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.permissions import AllowAny
 
-from .serializers import SeveritySerializer, CoordinatesSerializer
-from .models import Severity, Coordinates
+from .serializers import SeveritySerializer, CoordinatesSerializer, GraphSerializer
+from .models import Severity, Coordinates, Graph
 
 # model = load('./savedModels/model_customer.joblib')
 
@@ -38,3 +38,15 @@ class CoordinatesViewSet(APIView):
             serializer.save()
             return Response(serializer.data)
         return Response(serializer.errors)
+    
+class GraphViewSet(viewsets.ModelViewSet):
+    queryset = Graph.objects.all()
+    serializer_class = GraphSerializer
+    permission_classes = [AllowAny]
+
+    # def get(self, request):
+    #     serializer = GraphSerializer(data=request.data)
+    #     if serializer.is_valid():
+    #         serializer.save()
+    #         return Response(serializer.data)
+    #     return Response(serializer.errors)

@@ -46,7 +46,7 @@ html {
   background: linear-gradient(to right, #ffffff 48%, #cf1512 80%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin: 0 3vh 3vh;
+  margin: 2vh 3vh;
 }
 .coordinates-bottomContainer {
   width: 100%;
