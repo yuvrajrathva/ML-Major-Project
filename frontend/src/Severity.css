@@ -54,7 +54,7 @@ html {
   display: flex;
   justify-content: space-between;
   overflow: scroll;
-  gap: 10px;
+  gap: 5px;
   border: 1px dashed #cf1512;
   border-radius: 1rem;
   backdrop-filter: blur(5px);
@@ -62,6 +62,7 @@ html {
 
 .severity-bottomContainer form {
   width: 100%;
+  box-sizing: border-box;
   padding: 4vw 5vw 0;
 }
 
@@ -85,21 +86,26 @@ html {
 .nine input,
 .ten input, 
 .eleven input {
-  max-width: 400px;
+  /* max-width: 200px; */
   width: 100%;
-  margin: 0 0 5vh;
+  margin: 1vh 0 5vh;
   border: none;
   border-bottom: 1px solid grey;
   padding: 0.5vw 1vw;
   font-size: 1.5rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "poppins", sans-serif;
   font-weight: 500;
   color: #ffffff;
   padding: 1rem 0 0;
   background-color: transparent;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
 }
-.severity-bottomContainer .six input[type="checkbox"]{
+
+.severity-bottomContainer .ten , .nine  {
+    text-align: center;
+}
+
+.severity-bottomContainer .ten input[type="checkbox"], .nine input[type="checkbox"] {
     accent-color: rgb(27, 5, 108);
     border: 1px solid #ffffff;
     margin: 1rem 0 0;

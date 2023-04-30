@@ -6,5 +6,5 @@ router = DefaultRouter()
 
 urlpatterns = [
     path('severity/', SeverityViewSet.as_view(), name = 'accident-predict'),
-    path('coordnates/', CoordinatesViewSet.as_view(), name = 'coordinates-predict'),
+    path('coordinates/', CoordinatesViewSet.as_view(), name = 'coordinates-predict'),
 ]

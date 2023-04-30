@@ -10,7 +10,7 @@ from rest_framework.permissions import AllowAny
 from .serializers import SeveritySerializer, CoordinatesSerializer
 from .models import Severity, Coordinates
 
-model = load('./savedModels/model_customer.joblib')
+# model = load('./savedModels/model_customer.joblib')
 
 class SeverityViewSet(APIView):
     queryset = Severity.objects.all()
@@ -22,8 +22,8 @@ class SeverityViewSet(APIView):
         if serializer.is_valid():
             serializer.save()
             test_data = np.array([serializer.data])
-            y_pred = model.predict(test_data)
-            return Response(serializer.data,{'prediction':y_pred})
+            # y_pred = model.predict(test_data)
+            return Response(serializer.data)
         return Response(serializer.errors)
     
 

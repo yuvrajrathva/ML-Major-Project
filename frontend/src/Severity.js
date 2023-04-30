@@ -1,90 +1,124 @@
 import React from "react";
 import logo from "./assets/logo.png";
 import "./Severity.css";
+import { BackendURL } from "./BackendURL.js";
+
 const Severity = () => {
   const onSubmit = (e) => {
     e.preventDefault();
-    const end_lat = e.target.elements.end_lat.value;
-    const end_lng = e.target.elements.end_lng.value;
-    const distance = e.target.elements.distance.value;
-    const side = e.target.elements.side.value;
-    const state = e.target.elements.state.value;
-    const timezone = e.target.elements.timezone.value;
-    const temperature = e.target.elements.temperature.value;
-    const humidity = e.target.elements.humidity.value;
-    const pressure = e.target.elements.pressure.value;
-    const wind_direction = e.target.elements.wind_direction.value;
-    const wind_speed = e.target.elements.wind_speed.value;
-    const precipitation = e.target.elements.precipitation.value;
-    const weather_condition = e.target.elements.weather_condition.value;
-    const crossing = e.target.elements.crossing.value;
-    const give_way = e.target.elements.give_way.value;
-    const junction = e.target.elements.junction.value;
-    const station = e.target.elements.station.value;
-    const traffic_signal = e.target.elements.traffic_signal.value;
-    const sunrise_sunset = e.target.elements.sunrise_sunset.value;
-    const civil_twilight = e.target.elements.civil_twilight.value;
-    const nautical_twilight = e.target.elements.nautical_twilight.value;
-    const astronomical_twilight = e.target.elements.astronomical_twilight.value;
-    const month = e.target.elements.month.value;
-    const year = e.target.elements.year.value;
-    const hour = e.target.elements.hour.value;
-    const weekday = e.target.elements.weekday.value;
-    const weather_timestampmonth =
-      e.target.elements.weather_timestampmonth.value;
-    const weather_timestampyear = e.target.elements.weather_timestampyear.value;
-    const weather_timestamphour = e.target.elements.weather_timestamphour.value;
-    const weather_timestampweekday =
-      e.target.elements.weather_timestampweekday.value;
+    const id = e.target.id.value;
+    const severity = e.target.severity.value;
+    const start_time = e.target.start_time.value;
+    const end_time = e.target.end_time.value;
+    const start_lat = e.target.start_lat.value;
+    const start_lng = e.target.start_lng.value;
+    const end_lat = e.target.end_lat.value;
+    const end_lng = e.target.end_lng.value;
+    const distance = e.target.distance.value;
+    const discription = e.target.discription.value;
+    const number = e.target.number.value;
+    const street = e.target.street.value;
+    const side = e.target.side.value;
+    const city = e.target.city.value;
+    const county = e.target.county.value;
+    const state = e.target.state.value;
+    const zipcode = e.target.zipcode.value;
+    const country = e.target.country.value;
+    const timezone = e.target.timezone.value;
+    const airport_code = e.target.airport_code.value;
+    const weather_timestamp = e.target.weather_timestamp.value;
+    const temperature = e.target.temperature.value;
+    const wind_chill = e.target.wind_chill.value;
+    const humidity = e.target.humidity.value;
+    const pressure = e.target.pressure.value;
+    const visibility = e.target.visibility.value;
+    const wind_direction = e.target.wind_direction.value;
+    const wind_speed = e.target.wind_speed.value;
+    const precipitation = e.target.precipitation.value;
+    const weather_condition = e.target.weather_condition.value;
+    const amenity = e.target.amenity.value;
+    const bump = e.target.bump.value;
+    const crossing = e.target.crossing.value;
+    const give_way = e.target.give_way.value;
+    const junction = e.target.junction.value;
+    const no_exit = e.target.no_exit.value;
+    const railway = e.target.railway.value;
+    const roundabout = e.target.roundabout.value;
+    const station = e.target.station.value;
+    const stop = e.target.stop.value;
+    const traffic_calming = e.target.traffic_calming.value;
+    const traffic_signal = e.target.traffic_signal.value;
+    const turning_loop = e.target.turning_loop.value;
+    const sunrise_sunset = e.target.sunrise_sunset.value;
+    const civil_twilight = e.target.civil_twilight.value;
+    const nautical_twilight = e.target.nautical_twilight.value;
+    const astronomical_twilight = e.target.astronomical_twilight.value;
 
     const data = {
-      end_lat: end_lat,
-      end_lng: end_lng,
-      distance: distance,
-      side: side,
-      state: state,
-      timezone: timezone,
-      temperature: temperature,
-      humidity: humidity,
-      pressure: pressure,
-      wind_direction: wind_direction,
-      wind_speed: wind_speed,
-      precipitation: precipitation,
-      weather_condition: weather_condition,
-      crossing: crossing,
-      give_way: give_way,
-      junction: junction,
-      station: station,
-      traffic_signal: traffic_signal,
-      sunrise_sunset: sunrise_sunset,
-      civil_twilight: civil_twilight,
-      nautical_twilight: nautical_twilight,
-      astronomical_twilight: astronomical_twilight,
-      month: month,
-      year: year,
-      hour: hour,
-      weekday: weekday,
-      weather_timestampmonth: weather_timestampmonth,
-      weather_timestampyear: weather_timestampyear,
-      weather_timestamphour: weather_timestamphour,
-      weather_timestampweekday: weather_timestampweekday,
+      User_Id: id,
+      Severity: severity,
+      Start_Time: start_time,
+      End_Time: end_time,
+      Start_Lat: start_lat,
+      Start_Lng: start_lng,
+      End_Lat: end_lat,
+      End_Lng: end_lng,
+      Distance: distance,
+      Description: discription,
+      Number: number,
+      Street: street,
+      Side: side,
+      City: city,
+      County: county,
+      State: state,
+      Zipcode: zipcode,
+      Country: country,
+      Timezone: timezone,
+      Airport_Code: airport_code,
+      Weather_Timestamp: weather_timestamp,
+      Temperature: temperature,
+      Wind_Chill: wind_chill,
+      Humidity: humidity,
+      Pressure: pressure,
+      Visibility: visibility,
+      Wind_Direction: wind_direction,
+      Wind_Speed: wind_speed,
+      Precipitation: precipitation,
+      Weather_Condition: weather_condition,
+      Amenity: amenity,
+      Bump: bump,
+      Crossing: crossing,
+      Give_Way: give_way,
+      Junction: junction,
+      No_Exit: no_exit,
+      Railway: railway,
+      Roundabout: roundabout,
+      Station: station,
+      Stop: stop,
+      Traffic_Calming: traffic_calming,
+      Traffic_Signal: traffic_signal,
+      Turning_Loop: turning_loop,
+      Sunrise_Sunset: sunrise_sunset,
+      Civil_Twilight: civil_twilight,
+      Nautical_Twilight: nautical_twilight,
+      Astronomical_Twilight: astronomical_twilight,
     };
     console.log(data);
-    // fetch("http://localhost:5000/severity", {
-    //     method: "POST",
-    //     headers: {
-    //         "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify(data),
-    // })
-    // .then((res) => res.json())
-    // .then((data) => {
-    //     console.log(data);
-    //     alert("Severity of Accident is " + data.severity);
-    // })
-    // .catch((err) => {
-    //     console.log(err);
-    // });
+    fetch(BackendURL + "/severity/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        // alert("Severity of Accident is " + data.severity);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   const homepage = () => {
@@ -103,6 +137,69 @@ const Severity = () => {
         <div className="severity-bottomContainer">
           <form onSubmit={onSubmit}>
             <div className="one">
+              <div className="id">
+                <label htmlFor="id">ID</label>
+                <input
+                  type="text"
+                  id="id"
+                  name="id"
+                  placeholder="Enter id"
+                  defaultValue="1"
+                  
+                />
+              </div>
+              <div className="severity">
+                <label htmlFor="severity">Severity</label>
+                <input
+                  type="number"
+                  id="severity"
+                  name="severity"
+                  placeholder="Enter Severity"
+                  
+                />
+              </div>
+              <div className="start_time">
+                <label htmlFor="start_time">Start Time</label>
+                <input
+                  type="text"
+                  id="start_time"
+                  name="start_time"
+                  placeholder="Enter Start Time"
+                  
+                />
+              </div>
+              <div className="end_time">
+                <label htmlFor="end_time">End Time</label>
+                <input
+                  type="text"
+                  id="end_time"
+                  name="end_time"
+                  placeholder="Enter End Time"
+                  
+                />
+              </div>
+            </div>
+            <div className="two">
+              <div className="start_lat">
+                <label htmlFor="start_lat">Start Latitude</label>
+                <input
+                  type="number"
+                  id="start_lat"
+                  name="start_lat"
+                  placeholder="Enter Start Latitude"
+                  
+                />
+              </div>
+              <div className="start_lng">
+                <label htmlFor="start_lng">Start Longitude </label>
+                <input
+                  type="number"
+                  id="start_lng"
+                  name="start_lng"
+                  placeholder="Enter Start Longitude "
+                  
+                />
+              </div>
               <div className="end_lat">
                 <label htmlFor="end_lat">End Latitude</label>
                 <input
@@ -110,9 +207,11 @@ const Severity = () => {
                   id="end_lat"
                   name="end_lat"
                   placeholder="Enter End Latitude"
-                  required
+                  
                 />
               </div>
+            </div>
+            <div className="three">
               <div className="end_lng">
                 <label htmlFor="end_lng">End Longitude</label>
                 <input
@@ -120,7 +219,7 @@ const Severity = () => {
                   id="end_lng"
                   name="end_lng"
                   placeholder="Enter End Longitude"
-                  required
+                  
                 />
               </div>
               <div className="distance">
@@ -130,11 +229,41 @@ const Severity = () => {
                   id="distance"
                   name="distance"
                   placeholder="Enter Distance"
-                  required
+                  
+                />
+              </div>
+              <div className="discription">
+                <label htmlFor="discription">Discription</label>
+                <input
+                  type="text"
+                  id="discription"
+                  name="discription"
+                  placeholder="Enter Discription"
+                  
                 />
               </div>
             </div>
-            <div className="two">
+            <div className="four">
+              <div className="number">
+                <label htmlFor="number">Number</label>
+                <input
+                  type="number"
+                  id="number"
+                  name="number"
+                  placeholder="Enter Number"
+                  
+                />
+              </div>
+              <div className="street">
+                <label htmlFor="street">Street</label>
+                <input
+                  type="text"
+                  id="street"
+                  name="street"
+                  placeholder="Enter Street"
+                  
+                />
+              </div>
               <div className="side">
                 <label htmlFor="side">Side</label>
                 <input
@@ -142,7 +271,29 @@ const Severity = () => {
                   id="side"
                   name="side"
                   placeholder="Enter Side"
-                  required
+                  
+                />
+              </div>
+              <div className="city">
+                <label htmlFor="city">City</label>
+                <input
+                  type="text"
+                  id="city"
+                  name="city"
+                  placeholder="Enter City"
+                  
+                />
+              </div>
+            </div>
+            <div className="five">
+              <div className="county">
+                <label htmlFor="county">County</label>
+                <input
+                  type="text"
+                  id="county"
+                  name="county"
+                  placeholder="Enter County"
+                  
                 />
               </div>
               <div className="state">
@@ -152,9 +303,31 @@ const Severity = () => {
                   id="state"
                   name="state"
                   placeholder="Enter State"
-                  required
+                  
                 />
               </div>
+              <div className="zipcode">
+                <label htmlFor="zipcode">Zipcode</label>
+                <input
+                  type="text"
+                  id="zipcode"
+                  name="zipcode"
+                  placeholder="Enter Zipcode"
+                  
+                />
+              </div>
+              <div className="country">
+                <label htmlFor="country">Country</label>
+                <input
+                  type="text"
+                  id="country"
+                  name="country"
+                  placeholder="Enter Country"
+                  
+                />
+              </div>
+            </div>
+            <div className="six">
               <div className="timezone">
                 <label htmlFor="timezone">Timezone</label>
                 <input
@@ -162,11 +335,29 @@ const Severity = () => {
                   id="timezone"
                   name="timezone"
                   placeholder="Enter Timezone"
-                  required
+                  
                 />
               </div>
-            </div>
-            <div className="three">
+              <div className="airport_code">
+                <label htmlFor="airport_code">Airport Code</label>
+                <input
+                  type="text"
+                  id="airport_code"
+                  name="airport_code"
+                  placeholder="Enter Airport Code"
+                  
+                />
+              </div>
+              <div className="weather_timestamp">
+                <label htmlFor="weather_timestamp">Weather Timestamp</label>
+                <input
+                  type="text"
+                  id="weather_timestamp"
+                  name="weather_timestamp"
+                  placeholder="Enter Weather Timestamp"
+                  
+                />
+              </div>
               <div className="temperature">
                 <label htmlFor="temperature">Temperature</label>
                 <input
@@ -174,7 +365,19 @@ const Severity = () => {
                   id="temperature"
                   name="temperature"
                   placeholder="Enter Temperature"
-                                    required
+                  
+                />
+              </div>
+            </div>
+            <div className="seven">
+              <div className="wind_chill">
+                <label htmlFor="wind_chill">Wind Chill</label>
+                <input
+                  type="number"
+                  id="wind_chill"
+                  name="wind_chill"
+                  placeholder="Enter Wind Chill"
+                  
                 />
               </div>
               <div className="humidity">
@@ -184,7 +387,7 @@ const Severity = () => {
                   id="humidity"
                   name="humidity"
                   placeholder="Enter Humidity"
-                                    required
+                  
                 />
               </div>
               <div className="pressure">
@@ -194,11 +397,19 @@ const Severity = () => {
                   id="pressure"
                   name="pressure"
                   placeholder="Enter Pressure"
-                                    required
+                  
                 />
               </div>
-            </div>
-            <div className="four">
+              <div className="visibility">
+                <label htmlFor="visibility">Visibility</label>
+                <input
+                  type="number"
+                  id="visibility"
+                  name="visibility"
+                  placeholder="Enter Visibility"
+                  
+                />
+              </div>
               <div className="wind_direction">
                 <label htmlFor="wind_direction">Wind Direction</label>
                 <input
@@ -206,9 +417,11 @@ const Severity = () => {
                   id="wind_direction"
                   name="wind_direction"
                   placeholder="Enter Wind Direction"
-                  required
+                  
                 />
               </div>
+            </div>
+            <div className="eight">
               <div className="wind_speed">
                 <label htmlFor="wind_speed">Wind Speed</label>
                 <input
@@ -216,11 +429,9 @@ const Severity = () => {
                   id="wind_speed"
                   name="wind_speed"
                   placeholder="Enter Wind Speed"
-                  required
+                  
                 />
               </div>
-            </div>
-            <div className="five">
               <div className="precipitation">
                 <label htmlFor="precipitation">Precipitation</label>
                 <input
@@ -228,7 +439,7 @@ const Severity = () => {
                   id="precipitation"
                   name="precipitation"
                   placeholder="Enter Precipitation"
-                  required
+                  
                 />
               </div>
               <div className="weather_condition">
@@ -238,11 +449,19 @@ const Severity = () => {
                   id="weather_condition"
                   name="weather_condition"
                   placeholder="Enter Weather Condition"
-                  required
+                  
                 />
               </div>
             </div>
-            <div className="six">
+            <div className="nine">
+              <div className="amenity">
+                <label htmlFor="amenity">Amenity</label>
+                <input type="checkbox" id="amenity" name="amenity" />
+              </div>
+              <div className="bump">
+                <label htmlFor="bump">Bump</label>
+                <input type="checkbox" id="bump" name="bump" />
+              </div>
               <div className="crossing">
                 <label htmlFor="crossing">Crossing</label>
                 <input type="checkbox" id="crossing" name="crossing" />
@@ -255,9 +474,35 @@ const Severity = () => {
                 <label htmlFor="junction">Junction</label>
                 <input type="checkbox" id="junction" name="junction" />
               </div>
+              <div className="no_exit">
+                <label htmlFor="no_exit">No Exit</label>
+                <input type="checkbox" id="no_exit" name="no_exit" />
+              </div>
+            </div>
+            <div className="ten">
+              <div className="railway">
+                <label htmlFor="railway">Railway</label>
+                <input type="checkbox" id="railway" name="railway" />
+              </div>
+              <div className="roundabout">
+                <label htmlFor="roundabout">Roundabout</label>
+                <input type="checkbox" id="roundabout" name="roundabout" />
+              </div>
               <div className="station">
                 <label htmlFor="station">Station</label>
                 <input type="checkbox" id="station" name="station" />
+              </div>
+              <div className="stop">
+                <label htmlFor="stop">Stop</label>
+                <input type="checkbox" id="stop" name="stop" />
+              </div>
+              <div className="traffic_calming">
+                <label htmlFor="traffic_calming">Traffic Calming</label>
+                <input
+                  type="checkbox"
+                  id="traffic_calming"
+                  name="traffic_calming"
+                />
               </div>
               <div className="traffic_signal">
                 <label htmlFor="traffic_signal">Traffic Signal</label>
@@ -267,8 +512,12 @@ const Severity = () => {
                   name="traffic_signal"
                 />
               </div>
+              <div className="turning_loop">
+                <label htmlFor="turning_loop">Turning Loop</label>
+                <input type="checkbox" id="turning_loop" name="turning_loop" />
+              </div>
             </div>
-            <div className="seven">
+            <div className="eleven">
               <div className="sunrise_sunset">
                 <label htmlFor="sunrise_sunset">Sunrise Sunset</label>
                 <input
@@ -276,11 +525,9 @@ const Severity = () => {
                   id="sunrise_sunset"
                   name="sunrise_sunset"
                   placeholder="Enter Sunrise Sunset"
-                  required
+                  
                 />
               </div>
-            </div>
-            <div className="eight">
               <div className="civil_twilight">
                 <label htmlFor="civil_twilight">Civil Twilight</label>
                 <input
@@ -288,7 +535,7 @@ const Severity = () => {
                   id="civil_twilight"
                   name="civil_twilight"
                   placeholder="Enter Civil Twilight"
-                  required
+                  
                 />
               </div>
               <div className="nautical_twilight">
@@ -298,7 +545,7 @@ const Severity = () => {
                   id="nautical_twilight"
                   name="nautical_twilight"
                   placeholder="Enter Nautical Twilight"
-                  required
+                  
                 />
               </div>
               <div className="astronomical_twilight">
@@ -310,100 +557,6 @@ const Severity = () => {
                   id="astronomical_twilight"
                   name="astronomical_twilight"
                   placeholder="Enter Astronomical Twilight"
-                />
-              </div>
-            </div>
-            <div className="nine">
-              <div className="month">
-                <label htmlFor="month">Month</label>
-                <input
-                  type="number"
-                  id="month"
-                  name="month"
-                  placeholder="Enter Month"
-                  required
-                />
-              </div>
-              <div className="year">
-                <label htmlFor="year">Year</label>
-                <input
-                  type="number"
-                  id="year"
-                  name="year"
-                  placeholder="Enter Year"
-                  required
-                />
-              </div>
-              <div className="hour">
-                <label htmlFor="hour">Hour</label>
-                <input
-                  type="number"
-                  id="hour"
-                  name="hour"
-                  placeholder="Enter Hour"
-                  required
-                />
-              </div>
-              <div className="weekday">
-                <label htmlFor="weekday">Weekday</label>
-                <input
-                  type="number"
-                  id="weekday"
-                  name="weekday"
-                  placeholder="Enter Weekday"
-                  required
-                />
-              </div>
-            </div>
-            <div className="ten">
-              <div className="weather_timestampmonth">
-                <label htmlFor="weather_timestampmonth">
-                  Weather Timestamp Month
-                </label>
-                <input
-                  type="number"
-                  id="weather_timestampmonth"
-                  name="weather_timestampmonth"
-                  placeholder="Enter Weather Timestamp Month"
-                  required
-                />
-              </div>
-              <div className="weather_timestampyear">
-                <label htmlFor="weather_timestampyear">
-                  Weather Timestamp Year
-                </label>
-                <input
-                  type="number"
-                  id="weather_timestampyear"
-                  name="weather_timestampyear"
-                  placeholder="Enter Weather Timestamp Year"
-                  required
-                />
-              </div>
-            </div>
-            <div className="eleven">
-              <div className="weather_timestamphour">
-                <label htmlFor="weather_timestamphour">
-                  Weather Timestamp Hour
-                </label>
-                <input
-                  type="number"
-                  id="weather_timestamphour"
-                  name="weather_timestamphour"
-                  placeholder="Enter Weather Timestamp Hour"
-                  required
-                />
-              </div>
-              <div className="weather_timestampweekday">
-                <label htmlFor="weather_timestampweekday">
-                  Weather Timestamp Weekday
-                </label>
-                <input
-                  type="number"
-                  id="weather_timestampweekday"
-                  name="weather_timestampweekday"
-                  placeholder="Enter Weather Timestamp Weekday"
-                  required
                 />
               </div>
             </div>
