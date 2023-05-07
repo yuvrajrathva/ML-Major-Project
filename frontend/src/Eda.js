@@ -85,6 +85,14 @@ const Eda = () => {
       });
   }, []);
 
+const scrollToTop = () => {
+  const c = document.documentElement.scrollTop || document.body.scrollTop;
+  if (c > 0) {
+    window.requestAnimationFrame(scrollToTop);
+    window.scrollTo(0, c - c / 8);
+  }
+};
+
   return (
     <div className="eda-mainContainer">
       <div className="eda-container">
@@ -118,6 +126,9 @@ const Eda = () => {
               </div>
             ))}
         </div>
+        <button className="top" onClick={scrollToTop}>
+          Back to Top
+        </button>
       </div>
     </div>
     // <h1>hello</h1>

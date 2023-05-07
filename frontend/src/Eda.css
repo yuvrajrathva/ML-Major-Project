@@ -84,3 +84,26 @@
   width: 100%;
   height: 50vh;
 }
+
+.top {
+  --offset: 50px; 
+  
+  position: sticky;
+  bottom: 20px;      
+  place-self: end;
+  margin-top: calc(100vh + var(--offset));
+  
+  /* visual styling */
+  text-decoration: none;
+  padding: 10px;
+  font-family: sans-serif;
+  color: #fff;
+  background: #060330;
+  border-radius: 100px;
+  white-space: nowrap;
+
+  /* animation */
+  transition: transform 1s ease-out;
+
+  cursor: pointer;
+}
