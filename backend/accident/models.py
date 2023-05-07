@@ -117,7 +117,7 @@ class Coordinates(models.Model):
 
 TYPE_CHOICES = (
     ("Univariate continuous data analysis" , "Univariate continuous data analysis"),
-    ("Univariate discrete data analysis" , "Univariate discrete data analysis"),
+    ("Univariate categorical data analysis" , "Univariate categorical data analysis"),
     ("Bivariate categorical vs. categorical data analysis" , "Bivariate categorical vs. categorical data analysis"),
     ("Region-wise data analysis" , "Region-wise data analysis"),
     ("With time, data analysis" , "With time, data analysis"),
