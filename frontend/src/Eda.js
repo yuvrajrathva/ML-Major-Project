@@ -85,19 +85,19 @@ const Eda = () => {
       });
   }, []);
 
-const scrollToTop = () => {
-  const c = document.documentElement.scrollTop || document.body.scrollTop;
-  if (c > 0) {
-    window.requestAnimationFrame(scrollToTop);
-    window.scrollTo(0, c - c / 8);
-  }
-};
+  const scrollToTop = () => {
+    const c = document.documentElement.scrollTop || document.body.scrollTop;
+    if (c > 0) {
+      window.requestAnimationFrame(scrollToTop);
+      window.scrollTo(0, c - c / 8);
+    }
+  };
 
   return (
     <div className="eda-mainContainer">
       <div className="eda-container">
         <div className="eda-title">
-          <div className="logo" onClick={homepage}>
+          <div className="form-logo" onClick={homepage}>
             <img src={logo} />
           </div>
           <h1>EDA of our Model</h1>

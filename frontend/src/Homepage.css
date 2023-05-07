@@ -30,12 +30,16 @@ html {
   flex-direction: row;
   justify-content: space-between;
 }
-.logo {
+.homepage-logo {
   font-size: 5rem;
   font-weight: 500;
 }
-.logo img {
+.homepage-logo img {
   width: 50px;
+  cursor: pointer;
+}
+.homepage-logo img:hover {
+  width: 6%;
 }
 .herosection-topLeft {
   width: 45%;

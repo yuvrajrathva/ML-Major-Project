@@ -22,7 +22,17 @@
   margin: 3rem 0 0;
   gap: 10px;
 }
-
+.form-logo {
+  font-size: 5rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.form-logo img {
+  width: 50px;
+}
+.form-logo img:hover {
+  width: 110%;
+}
 .eda-filter {
   display: flex;
   flex-direction: column;
@@ -86,12 +96,12 @@
 }
 
 .top {
-  --offset: 50px; 
+  /* --offset: 50px;  */
   
   position: sticky;
   bottom: 20px;      
   place-self: end;
-  margin-top: calc(100vh + var(--offset));
+  /* margin-top: 100vh; */
   
   /* visual styling */
   text-decoration: none;

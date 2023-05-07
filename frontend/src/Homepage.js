@@ -15,12 +15,15 @@ const Homepage = () => {
   const eda = () => {
     window.location.href = "/eda";
   }
+  const homepage = () => {
+    window.location.href = "/";
+  };
   
   return (
     <div className="herosection-mainContainer">
       <div className="herosection-container">
         <div>
-          <div className="logo">
+          <div className="homepage-logo" onClick={homepage}>
             <img src={logo} />
           </div>
         </div>
